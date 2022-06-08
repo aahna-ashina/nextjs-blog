@@ -1,6 +1,8 @@
 import Head from 'next/head'
 
 export default function Home() {
+  const tmpDir = require('os').tmpdir()
+  console.log('tmpDir:', tmpDir)
   return (
     <div className="container">
       <Head>
@@ -10,11 +12,11 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to {tmpDir}
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Get started by editing <code>{require('os').tmpdir()}</code>
         </p>
 
         <div className="grid">
